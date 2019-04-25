@@ -1,4 +1,4 @@
-package com.hackjam.sevenshop.activity;
+package com.hackjam.sevenshop.activity.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
