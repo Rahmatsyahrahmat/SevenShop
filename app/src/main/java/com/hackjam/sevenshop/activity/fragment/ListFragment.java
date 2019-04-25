@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 
 import com.hackjam.sevenshop.R;
 
-/**
+/**1
  * A simple {@link Fragment} subclass.
  */
 public class ListFragment extends Fragment {
