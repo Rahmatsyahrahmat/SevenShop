@@ -4,11 +4,11 @@ import android.support.v7.app.AppCompatActivity;
 
 import java.io.Serializable;
 
-public class Produk implements Serializable {
+public class itemProduk implements Serializable {
     private String nama, hargaAwal, hargaPotongan, deskripsi;
     private int jumlahJoin, maxJoin;
 
-    public Produk(String nama, String hargaAwal, String hargaPotongan, String deskripsi, int jumlahJoin, int maxJoin) {
+    public itemProduk(String nama, String hargaAwal, String hargaPotongan, String deskripsi, int jumlahJoin, int maxJoin) {
         this.nama = nama;
         this.hargaAwal = hargaAwal;
         this.hargaPotongan = hargaPotongan;

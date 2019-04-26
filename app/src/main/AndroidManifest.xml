@@ -23,6 +23,7 @@
                 android:resource="@xml/picker_provider_paths" />
         </provider>
         <activity android:name=".activity.RegisterActivity"/>
+        <activity android:name=".activity.EditProfileActivity"/>
         <activity android:name=".activity.LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
