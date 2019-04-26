@@ -2,49 +2,42 @@ package com.hackjam.sevenshop.model;
 
 import android.support.v7.app.AppCompatActivity;
 
-public class itemProduk extends AppCompatActivity {
+import java.io.Serializable;
 
-    public itemProduk(int mImageResource,String namabarang,int hargalama,int hargamurah){
-        this.mImageResource=mImageResource;
-        this.namabarang=namabarang;
-        this.hargalama=hargalama;
-        this.hargamurah=hargamurah;
+public class Produk implements Serializable {
+    private String nama, hargaAwal, hargaPotongan, deskripsi;
+    private int jumlahJoin, maxJoin;
+
+    public Produk(String nama, String hargaAwal, String hargaPotongan, String deskripsi, int jumlahJoin, int maxJoin) {
+        this.nama = nama;
+        this.hargaAwal = hargaAwal;
+        this.hargaPotongan = hargaPotongan;
+        this.deskripsi = deskripsi;
+        this.jumlahJoin = jumlahJoin;
+        this.maxJoin = maxJoin;
     }
 
-    private int mImageResource;
-    private String namabarang;
-    private int hargamurah,hargalama;
-
-    public int getmImageResource() {
-        return mImageResource;
+    public String getNama() {
+        return nama;
     }
 
-    public void setmImageResource(int mImageResource) {
-        this.mImageResource = mImageResource;
+    public String getHargaAwal() {
+        return hargaAwal;
     }
 
-    public String getNamabarang() {
-        return namabarang;
+    public String getHargaPotongan() {
+        return hargaPotongan;
     }
 
-    public void setNamabarang(String namabarang) {
-        this.namabarang = namabarang;
+    public String getDeskripsi() {
+        return deskripsi;
     }
 
-    public int getHargamurah() {
-        return hargamurah;
+    public int getJumlahJoin() {
+        return jumlahJoin;
     }
 
-    public void setHargamurah(int hargamurah) {
-        this.hargamurah = hargamurah;
+    public int getMaxJoin() {
+        return maxJoin;
     }
-
-    public int getHargalama() {
-        return hargalama;
-    }
-
-    public void setHargalama(int hargalama) {
-        this.hargalama = hargalama;
-    }
-
 }
