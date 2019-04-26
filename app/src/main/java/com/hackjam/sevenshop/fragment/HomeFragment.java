@@ -52,8 +52,8 @@ public class HomeFragment extends Fragment {
 
         //progress bar
         progressBar = view.findViewById(R.id.pb_produk_item_produk_baru);
-        progressBar.setProgress(0);
-        progressBar.setMax(100);
+//        progressBar.setProgress(0);
+//        progressBar.setMax(100);
 
         return view;
         }

@@ -1,6 +1,7 @@
 package com.hackjam.sevenshop.fragment;
 
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -41,7 +42,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
 
     private CircleImageView iv_foto;
     private TextView nama, editProfil, editPassword, syaratKetentuan, keluar;
-
+    private ProgressDialog progress;
     private FirebaseAuth firebaseAuth;
 
     public ProfileFragment() {
@@ -60,7 +61,9 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
         editPassword = rootView.findViewById(R.id.tv_profile_ganti_pass);
         syaratKetentuan = rootView.findViewById(R.id.tv_profile_syarat_dan_ketentuan);
         keluar = rootView.findViewById(R.id.tv_profile_keluar);
-
+        progress = new ProgressDialog(getContext());
+        progress.setMessage("Loading");
+        progress.show();
         firebaseAuth = FirebaseAuth.getInstance();
 
         StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("User").child(firebaseAuth.getCurrentUser().getUid()+".jpg");
@@ -70,6 +73,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
                 @Override
                 public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
                     iv_foto.setImageBitmap(BitmapFactory.decodeFile(localFile.getAbsolutePath()));
+                    progress.dismiss();
                 }
             });
         } catch (IOException e) {
@@ -91,7 +95,10 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
             }
         });
 
-
+        editProfil.setOnClickListener(this);
+        editPassword.setOnClickListener(this);
+        keluar.setOnClickListener(this);
+        syaratKetentuan.setOnClickListener(this);
 
 
         return rootView;

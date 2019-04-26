@@ -1,9 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
     tools:context=".activity.EditProfileActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_editprofile_foto"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/ic_launcher"
+            android:elevation="10dp"
+            />
+    <EditText
+        android:padding="10dp"
+        android:id="@+id/et_editprofile_nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama"
+        />
+    <EditText
+        android:padding="10dp"
+        android:id="@+id/et_editprofile_alamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Alamat"
+        />
+    <EditText
+        android:padding="10dp"
+        android:id="@+id/et_editprofile_kecamatan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Kecamatan"
+        />
+    <EditText
+        android:padding="10dp"
+        android:id="@+id/et_editprofile_kota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Kota"
+        />
+    <EditText
+        android:padding="10dp"
+        android:id="@+id/et_editprofile_provinsi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Provinsi"
+        />
+    <EditText
+        android:padding="10dp"
+        android:id="@+id/et_editprofile_no_telp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nomor Telepon"
+        android:inputType="number"
+        />
+    <Button
+        android:id="@+id/btn_editprofile_simpan"
+        android:layout_marginTop="20dp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Simpan"
+        android:layout_gravity="right"
+        />
+
+</LinearLayout>
