@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "755058544342",
+    "firebase_url": "https://seven-shop-8fce4.firebaseio.com",
+    "project_id": "seven-shop-8fce4",
+    "storage_bucket": "seven-shop-8fce4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:755058544342:android:c8648c170b5bd5aa",
+        "android_client_info": {
+          "package_name": "com.hackjam.sevenshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "755058544342-h1qn721ioekpsuluener1u899ohnbnop.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hackjam.sevenshop",
+            "certificate_hash": "6389c29b2312018717757aaa066fe35dc34009d7"
+          }
+        },
+        {
+          "client_id": "755058544342-l278fcu0o59r6k7c03alrjcvgciei9pe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDX4drFrO3czBUb3uMIJNrbUGo-Lk-7i2c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "755058544342-l278fcu0o59r6k7c03alrjcvgciei9pe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
