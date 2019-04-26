@@ -5,15 +5,49 @@
     android:layout_height="match_parent"
     tools:context=".activity.fragment.HomeFragment">
 
-
     <View
         android:layout_height="160dp"
-        android:layout_width="match_parent"/>
+        android:layout_width="match_parent"
+        android:background="#FFFFFF"/>
 
-    <EditText
-        android:layout_width="240dp"
+    <SearchView
+        android:id="@+id/sv_home_home"
+        android:layout_width="350dp"
         android:layout_height="40dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="150dp" />
+        android:layout_marginBottom="150dp"
+        android:queryHint="Pencarian..."
+        android:iconifiedByDefault="false"
+        android:background="@drawable/background_search_view"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Kategori"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="280dp"/>
+
+    <GridView
+        android:id="@+id/kategori_home_home"
+        android:layout_width="328dp"
+        android:layout_height="82dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="320dp"
+        android:background="@drawable/background_item_pic_produk"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="430dp"
+        android:text="Produk Baru"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/produk_home_home"
+        android:layout_width="338dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="460dp">
+    </android.support.v7.widget.RecyclerView>
 
 </FrameLayout>
