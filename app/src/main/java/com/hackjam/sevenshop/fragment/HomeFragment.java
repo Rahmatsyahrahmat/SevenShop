@@ -1,4 +1,4 @@
-package com.hackjam.sevenshop.activity.fragment;
+package com.hackjam.sevenshop.fragment;
 
 
 import android.os.Bundle;
