@@ -24,6 +24,7 @@
         android:layout_height="wrap_content"
         android:hint="E-mail"
         android:inputType="textEmailAddress"
+
         />
     <EditText
         android:id="@+id/et_login_password"

@@ -14,6 +14,7 @@ import android.widget.ProgressBar;
 
 import com.hackjam.sevenshop.R;
 import com.hackjam.sevenshop.activity.adapter.SliderAdapter;
+import com.hackjam.sevenshop.model.itemProduk;
 
 import java.util.ArrayList;
 import java.util.Timer;
@@ -42,6 +43,8 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
+        ArrayList<itemProduk> itemProduks = new ArrayList<>();
+        itemProduks.add(new itemProduk(R.layout.item_produk_baru))
 
         viewPager = view.findViewById(R.id.vp_slide_home);
         sliderAdapter = new SliderAdapter(getActivity());
