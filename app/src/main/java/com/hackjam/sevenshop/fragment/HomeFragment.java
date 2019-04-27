@@ -44,7 +44,7 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         ArrayList<itemProduk> itemProduks = new ArrayList<>();
-        itemProduks.add(new itemProduk(R.layout.item_produk_baru))
+        
 
         viewPager = view.findViewById(R.id.vp_slide_home);
         sliderAdapter = new SliderAdapter(getActivity());
