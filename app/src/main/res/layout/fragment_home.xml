@@ -33,8 +33,7 @@
                 android:id="@+id/rv_home_kategori"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/background_item_pic_produk"
-                />
+                android:background="@drawable/background_item_pic_produk" />
 
             <TextView
                 android:layout_width="wrap_content"

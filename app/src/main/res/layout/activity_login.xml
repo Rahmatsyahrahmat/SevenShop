@@ -43,31 +43,35 @@
     <EditText
         android:id="@+id/et_login_password"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/background_inputtext"
         android:inputType="textPassword"
         />
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:weightSum="2">
         <Button
             android:id="@+id/btn_login_register"
             android:text="Daftar"
+            android:textColor="@color/primaryColor"
             android:layout_marginTop="20dp"
-            android:layout_width="100dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@drawable/background_button_daftar"
             />
         <Button
             android:layout_weight="1"
             android:id="@+id/btn_login_login"
             android:text="Masuk"
+            android:textColor="#FFFFFF"
+            android:background="@color/primaryColor"
             android:layout_marginTop="20dp"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             />
-
     </LinearLayout>
 
 

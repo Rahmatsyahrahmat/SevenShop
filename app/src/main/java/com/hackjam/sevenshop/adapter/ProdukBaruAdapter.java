@@ -15,12 +15,12 @@ import com.hackjam.sevenshop.model.Produk;
 
 import java.util.ArrayList;
 
-public class ProdukAdapter extends RecyclerView.Adapter<ProdukAdapter.ViewHolder> {
+public class ProdukBaruAdapter extends RecyclerView.Adapter<ProdukBaruAdapter.ViewHolder> {
 
     private ArrayList<Produk> produks;
     private Context context;
 
-    public ProdukAdapter(Context context, ArrayList<Produk> produks){
+    public ProdukBaruAdapter(Context context, ArrayList<Produk> produks){
         this.context = context;
         this.produks = produks;
     }
