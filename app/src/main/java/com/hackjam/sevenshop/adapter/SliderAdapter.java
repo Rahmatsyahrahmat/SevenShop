@@ -1,4 +1,4 @@
-package com.hackjam.sevenshop.activity.adapter;
+package com.hackjam.sevenshop.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -7,7 +7,6 @@ import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.hackjam.sevenshop.R;

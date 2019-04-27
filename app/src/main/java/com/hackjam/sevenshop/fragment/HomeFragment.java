@@ -3,7 +3,6 @@ package com.hackjam.sevenshop.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,12 +12,10 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
 import com.hackjam.sevenshop.R;
-import com.hackjam.sevenshop.activity.adapter.SliderAdapter;
+import com.hackjam.sevenshop.adapter.SliderAdapter;
 import com.hackjam.sevenshop.model.itemProduk;
 
 import java.util.ArrayList;
-import java.util.Timer;
-import java.util.TimerTask;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -44,7 +41,7 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         ArrayList<itemProduk> itemProduks = new ArrayList<>();
-        
+
 
         viewPager = view.findViewById(R.id.vp_slide_home);
         sliderAdapter = new SliderAdapter(getActivity());
