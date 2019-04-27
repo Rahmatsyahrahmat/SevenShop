@@ -4,6 +4,9 @@ package com.hackjam.sevenshop.fragment;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,8 +15,11 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
 import com.hackjam.sevenshop.R;
+import com.hackjam.sevenshop.adapter.KategoriAdapter;
+import com.hackjam.sevenshop.adapter.ProdukAdapter;
 import com.hackjam.sevenshop.adapter.SliderAdapter;
-import com.hackjam.sevenshop.model.itemProduk;
+import com.hackjam.sevenshop.model.Kategori;
+import com.hackjam.sevenshop.model.Produk;
 
 import java.util.ArrayList;
 
@@ -22,13 +28,12 @@ import java.util.ArrayList;
  */
 public class HomeFragment extends Fragment {
 
-    private ViewPager viewPager;
-    SliderAdapter sliderAdapter;
-    LinearLayout sliderDotspanel;
-    private int dotscount;
-    private ImageView[] dots;
+    private View view;
 
-    private ProgressBar progressBar;
+    private RecyclerView rvKatgeori, rvProduk;
+
+    private ProdukAdapter produkAdapter;
+    private KategoriAdapter kategoriAdapter;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -38,25 +43,45 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        ArrayList<itemProduk> itemProduks = new ArrayList<>();
+        rvKatgeori = view.findViewById(R.id.rv_home_kategori);
+        rvProduk = view.findViewById(R.id.rv_home_produk);
+        rvKatgeori.setLayoutManager(new GridLayoutManager(getContext(),3));
+        rvProduk.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        ArrayList<Kategori> kategoris = new ArrayList<>();
+        kategoris.add(new Kategori("Laptop",R.drawable.ic_home_24dp));
+        kategoris.add(new Kategori("Handphone",R.drawable.ic_home_24dp));
+        kategoris.add(new Kategori("Kamera",R.drawable.ic_home_24dp));
+        kategoris.add(new Kategori("Otomotif",R.drawable.ic_home_24dp));
+        kategoris.add(new Kategori("Fashion",R.drawable.ic_home_24dp));
+        kategoris.add(new Kategori("Komputer",R.drawable.ic_home_24dp));
+
+        ArrayList<Produk> produks = new ArrayList<>();
+        produks.add(new Produk("skdjnsdjn","skdfnskfcsjdnc","fsnfskdfj","fsiuncweskucfne kuchjnfesidfcujskn",28,100));
+        produks.add(new Produk("skdjnsdjn","skdfnskfcsjdnc","fsnfskdfj","fsiuncweskucfne kuchjnfesidfcujskn",28,100));
+        produks.add(new Produk("skdjnsdjn","skdfnskfcsjdnc","fsnfskdfj","fsiuncweskucfne kuchjnfesidfcujskn",28,100));
+        produks.add(new Produk("skdjnsdjn","skdfnskfcsjdnc","fsnfskdfj","fsiuncweskucfne kuchjnfesidfcujskn",28,100));
+        produks.add(new Produk("skdjnsdjn","skdfnskfcsjdnc","fsnfskdfj","fsiuncweskucfne kuchjnfesidfcujskn",28,100));
+        produks.add(new Produk("skdjnsdjn","skdfnskfcsjdnc","fsnfskdfj","fsiuncweskucfne kuchjnfesidfcujskn",28,100));
+        produks.add(new Produk("skdjnsdjn","skdfnskfcsjdnc","fsnfskdfj","fsiuncweskucfne kuchjnfesidfcujskn",28,100));
+        produks.add(new Produk("skdjnsdjn","skdfnskfcsjdnc","fsnfskdfj","fsiuncweskucfne kuchjnfesidfcujskn",28,100));
+        produks.add(new Produk("skdjnsdjn","skdfnskfcsjdnc","fsnfskdfj","fsiuncweskucfne kuchjnfesidfcujskn",28,100));
+        produks.add(new Produk("skdjnsdjn","skdfnskfcsjdnc","fsnfskdfj","fsiuncweskucfne kuchjnfesidfcujskn",28,100));
+        produks.add(new Produk("skdjnsdjn","skdfnskfcsjdnc","fsnfskdfj","fsiuncweskucfne kuchjnfesidfcujskn",28,100));
 
 
-        viewPager = view.findViewById(R.id.vp_slide_home);
-        sliderAdapter = new SliderAdapter(getActivity());
-        viewPager.setAdapter(sliderAdapter);
-        sliderDotspanel = view.findViewById(R.id.ll_slide_home);
-        dotscount = viewPager.getChildCount();
-        dots = new ImageView[dotscount];
 
-        //progress bar
-        progressBar = view.findViewById(R.id.pb_produk_item_produk_baru);
-        progressBar.setProgress(0);
-        progressBar.setMax(100);
+        produkAdapter = new ProdukAdapter(getContext(),produks);
+        kategoriAdapter = new KategoriAdapter(getContext(),kategoris);
+
+        rvProduk.setAdapter(produkAdapter);
+        rvKatgeori.setAdapter(kategoriAdapter);
 
         return view;
         }
 
     }
+
 

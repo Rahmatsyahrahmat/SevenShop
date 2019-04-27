@@ -4,19 +4,20 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="20dp"
+    android:layout_margin="10dp"
+    android:background="@drawable/background_item_profile"
     android:gravity="center">
 
-    <android.support.v7.widget.CardView
+    <ImageView
+        android:id="@+id/iv_kategori_gambar"
         android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:background="@drawable/background_item_pic_produk"/>
+        android:layout_height="80dp" />
 
     <TextView
-        android:id="@+id/tv_item_item"
+        android:id="@+id/tv_kategori_judul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:text="Text"
         android:textSize="15dp"/>
 </LinearLayout>
