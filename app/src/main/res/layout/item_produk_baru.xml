@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent">
 
-    <View
+    <ImageView
+        android:id="@+id/img_produk_item_produk_baru"
         android:layout_width="95dp"
         android:layout_height="87dp"
         android:background="@drawable/background_item_pic_produk"

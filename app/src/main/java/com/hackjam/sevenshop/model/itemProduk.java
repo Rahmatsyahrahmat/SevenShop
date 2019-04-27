@@ -4,16 +4,16 @@ import android.support.v7.app.AppCompatActivity;
 
 public class itemProduk extends AppCompatActivity {
 
+    private int mImageResource;
+    private String namabarang;
+    private int hargamurah,hargalama;
+
     public itemProduk(int mImageResource,String namabarang,int hargalama,int hargamurah){
         this.mImageResource=mImageResource;
         this.namabarang=namabarang;
         this.hargalama=hargalama;
         this.hargamurah=hargamurah;
     }
-
-    private int mImageResource;
-    private String namabarang;
-    private int hargamurah,hargalama;
 
     public int getmImageResource() {
         return mImageResource;
