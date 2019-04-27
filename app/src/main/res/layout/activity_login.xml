@@ -55,7 +55,7 @@
         <Button
             android:id="@+id/btn_login_register"
             android:text="Daftar"
-            android:textColor="@color/primaryColor"
+            android:textColor="@color/colorPrimary"
             android:layout_marginTop="20dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
             android:id="@+id/btn_login_login"
             android:text="Masuk"
             android:textColor="#FFFFFF"
-            android:background="@color/primaryColor"
+            android:background="@color/colorPrimary"
             android:layout_marginTop="20dp"
             android:layout_width="0dp"
             android:layout_height="match_parent"

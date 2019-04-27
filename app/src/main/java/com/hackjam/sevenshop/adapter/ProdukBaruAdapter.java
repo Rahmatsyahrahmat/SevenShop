@@ -11,16 +11,16 @@ import android.widget.TextView;
 
 import com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar;
 import com.hackjam.sevenshop.R;
-import com.hackjam.sevenshop.model.Produk;
+import com.hackjam.sevenshop.model.itemProduk;
 
 import java.util.ArrayList;
 
 public class ProdukBaruAdapter extends RecyclerView.Adapter<ProdukBaruAdapter.ViewHolder> {
 
-    private ArrayList<Produk> produks;
+    private ArrayList<itemProduk> produks;
     private Context context;
 
-    public ProdukBaruAdapter(Context context, ArrayList<Produk> produks){
+    public ProdukBaruAdapter(Context context, ArrayList<itemProduk> produks){
         this.context = context;
         this.produks = produks;
     }
@@ -34,7 +34,7 @@ public class ProdukBaruAdapter extends RecyclerView.Adapter<ProdukBaruAdapter.Vi
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-        Produk produk = produks.get(i);
+        itemProduk produk = produks.get(i);
         viewHolder.judul.setText(produk.getNama());
         viewHolder.harga.setText(produk.getHargaPotongan());
         viewHolder.progres.setText(produk.getJumlahJoin()+"/"+produk.getMaxJoin());

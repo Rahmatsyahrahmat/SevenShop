@@ -25,6 +25,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.hackjam.sevenshop.R;
 import com.hackjam.sevenshop.activity.EditProfileActivity;
+import com.hackjam.sevenshop.activity.GantiPasswordActivity;
 import com.hackjam.sevenshop.activity.LoginActivity;
 import com.hackjam.sevenshop.model.User;
 
@@ -72,12 +73,13 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
             storageReference.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
-                    iv_foto.setImageBitmap(BitmapFactory.decodeFile(localFile.getAbsolutePath()));
+                    if(localFile!=null)iv_foto.setImageBitmap(BitmapFactory.decodeFile(localFile.getAbsolutePath()));
                     progress.dismiss();
                 }
             });
         } catch (IOException e) {
             e.printStackTrace();
+            progress.dismiss();
         }
 
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("User").child(firebaseAuth.getCurrentUser().getUid());
@@ -100,7 +102,6 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
         keluar.setOnClickListener(this);
         syaratKetentuan.setOnClickListener(this);
 
-
         return rootView;
 
     }
@@ -112,6 +113,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
                 startActivity(new Intent(getContext(), EditProfileActivity.class));
                 break;
             case R.id.tv_profile_ganti_pass :
+                startActivity(new Intent(getContext(), GantiPasswordActivity.class));
                 break;
             case R.id.tv_profile_syarat_dan_ketentuan :
                 break;
