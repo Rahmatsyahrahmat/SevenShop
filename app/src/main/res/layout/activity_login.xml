@@ -30,10 +30,9 @@
     <EditText
         android:id="@+id/et_login_email"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_height="40dp"
         android:background="@drawable/background_inputtext"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"/>
 
     <TextView
         android:layout_width="311dp"
@@ -43,10 +42,9 @@
 
     <EditText
         android:id="@+id/et_login_password"
-        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Password"
+        android:layout_height="40dp"
+        android:background="@drawable/background_inputtext"
         android:inputType="textPassword"
         />
     <LinearLayout
