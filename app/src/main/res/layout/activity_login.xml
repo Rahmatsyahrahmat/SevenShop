@@ -8,30 +8,43 @@
     android:padding="50dp"
     tools:context=".activity.LoginActivity">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="281dp"
+        android:background="@drawable/sevenshops_Logo" />
+
     <TextView
-        android:layout_marginBottom="100dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:textSize="50dp"
-        android:gravity="center"
-        />
+        android:layout_width="311dp"
+        android:layout_height="33dp"
+        android:text="Masuk"
+        android:textStyle="bold"
+        android:textColor="@color/primaryColor"
+        android:textAlignment="center"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="311dp"
+        android:layout_height="33dp"
+        android:text="Email"/>
 
     <EditText
         android:id="@+id/et_login_email"
-        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="E-mail"
-        android:inputType="textEmailAddress"
+        android:layout_height="40dp"
+        android:background="@drawable/background_inputtext"
+        android:inputType="textEmailAddress"/>
 
-        />
+    <TextView
+        android:layout_width="311dp"
+        android:layout_height="33dp"
+        android:text="Kata Sandi"/>
+
+
     <EditText
         android:id="@+id/et_login_password"
-        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Password"
+        android:layout_height="40dp"
+        android:background="@drawable/background_inputtext"
         android:inputType="textPassword"
         />
     <LinearLayout
