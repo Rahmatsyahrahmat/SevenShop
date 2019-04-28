@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar;
 import com.hackjam.sevenshop.R;
 import com.hackjam.sevenshop.model.itemProduk;
 
@@ -37,8 +39,6 @@ public class ProdukBaruAdapter extends RecyclerView.Adapter<ProdukBaruAdapter.Vi
         viewHolder.judul.setText(produk.getNama());
         viewHolder.harga.setText(produk.getHargaPotongan());
         viewHolder.progres.setText(produk.getJumlahJoin()+"/"+produk.getMaxJoin());
-        viewHolder.progressBar.setProgress(produk.getJumlahJoin());
-        viewHolder.progressBar.setVisibility(View.VISIBLE);
     }
 
     @Override
@@ -48,7 +48,7 @@ public class ProdukBaruAdapter extends RecyclerView.Adapter<ProdukBaruAdapter.Vi
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private TextView judul, harga, progres;
-        private ProgressBar progressBar;
+        private RoundCornerProgressBar progressBar;
         private ImageView foto;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);

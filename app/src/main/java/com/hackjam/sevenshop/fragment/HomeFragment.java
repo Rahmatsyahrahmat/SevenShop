@@ -32,7 +32,7 @@ public class HomeFragment extends Fragment {
 
     private RecyclerView rvKatgeori, rvProduk;
 
-    private ProdukBaruAdapter produkAdapter;
+    private ProdukAdapter produkAdapter;
     private KategoriAdapter kategoriAdapter;
 
     public HomeFragment() {
