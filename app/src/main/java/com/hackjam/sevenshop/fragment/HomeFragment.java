@@ -99,14 +99,12 @@ public class HomeFragment extends Fragment {
                 produkAdapter = new ProdukBaruAdapter(getContext(),itemProduks);
                 rvProduk.setAdapter(produkAdapter);
 
-
-
                 // listening to search query text change
                 searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
                     @Override
                     public boolean onQueryTextSubmit(String query) {
                         // filter recycler view when query submitted
-                       // produkAdapter.getFilter().filter(query);
+                        //produkAdapter.getFilter().filter(query);
                         return false;
                     }
 

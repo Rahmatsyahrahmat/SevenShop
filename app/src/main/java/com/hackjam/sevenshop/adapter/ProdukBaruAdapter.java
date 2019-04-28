@@ -39,6 +39,7 @@ public class ProdukBaruAdapter extends RecyclerView.Adapter<ProdukBaruAdapter.Vi
         viewHolder.judul.setText(produk.getNama());
         viewHolder.harga.setText(produk.getHargaPotongan());
         viewHolder.progres.setText(produk.getJumlahJoin()+"/"+produk.getMaxJoin());
+        viewHolder.progressBar.setProgress(produk.getJumlahJoin());
     }
 
     @Override
@@ -48,7 +49,7 @@ public class ProdukBaruAdapter extends RecyclerView.Adapter<ProdukBaruAdapter.Vi
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private TextView judul, harga, progres;
-        private RoundCornerProgressBar progressBar;
+        private ProgressBar progressBar;
         private ImageView foto;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
