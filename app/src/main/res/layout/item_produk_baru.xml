@@ -39,13 +39,13 @@
     <TextView
         android:id="@+id/tv_produk_harga"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="16dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="TextView"
+        android:text="Rp TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/iv_produk_gambar"
         app:layout_constraintTop_toBottomOf="@+id/tv_produk_judul" />
@@ -67,6 +67,26 @@
         app:layout_constraintStart_toEndOf="@+id/iv_produk_gambar"
         app:layout_constraintTop_toBottomOf="@+id/p_produk_progres" />
 
+    <!--<com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar-->
+        <!--android:id="@+id/p_produk_progres"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginLeft="8dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:layout_marginRight="8dp"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/iv_produk_gambar"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/tv_produk_harga"-->
+        <!--app:rcProgress="10"-->
+        <!--app:rcMax="100"-->
+        <!--app:rcProgressColor="@color/colorPrimary"-->
+        <!--app:rcBackgroundColor="@color/colorBlack">-->
+
+    <!--</com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar>-->
+
+
     <ProgressBar
         android:id="@+id/p_produk_progres"
         android:layout_width="0dp"
@@ -76,13 +96,12 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:max="100"
+        android:max="50"
         android:progressTint="@color/colorPrimaryDark"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/iv_produk_gambar"
-        app:layout_constraintTop_toBottomOf="@+id/tv_produk_harga"
-        app:layout_constraintHorizontal_bias="0.0"/>
+        app:layout_constraintTop_toBottomOf="@+id/tv_produk_harga"/>
 
 
 </android.support.constraint.ConstraintLayout>
