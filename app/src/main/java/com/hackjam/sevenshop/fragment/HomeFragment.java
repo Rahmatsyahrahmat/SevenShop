@@ -72,7 +72,6 @@ public class HomeFragment extends Fragment {
         produks.add(new itemProduk("skdjnsdjn","skdfnskfcsjdnc","fsnfskdfj","fsiuncweskucfne kuchjnfesidfcujskn",28,100));
 
 
-
         produkAdapter = new ProdukBaruAdapter(getContext(),produks);
         kategoriAdapter = new KategoriAdapter(getContext(),kategoris);
 

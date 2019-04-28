@@ -20,6 +20,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:menu="@menu/main_menu"
+        android:background="?android:attr/windowBackground"
+        app:itemIconTint="@drawable/btn_tab_navigation"
+        app:itemTextColor="@drawable/btn_tab_navigation"
         app:labelVisibilityMode="labeled"/>
 
 </LinearLayout>
