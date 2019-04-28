@@ -3,16 +3,21 @@ package com.hackjam.sevenshop.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 
 import com.hackjam.sevenshop.R;
 import com.hackjam.sevenshop.adapter.KategoriAdapter;
 import com.hackjam.sevenshop.adapter.ProdukBaruAdapter;
+import com.hackjam.sevenshop.adapter.SliderAdapter;
 import com.hackjam.sevenshop.model.Kategori;
 import com.hackjam.sevenshop.model.itemProduk;
 
@@ -27,7 +32,7 @@ public class HomeFragment extends Fragment {
 
     private RecyclerView rvKatgeori, rvProduk;
 
-    private ProdukBaruAdapter produkAdapter;
+    private ProdukAdapter produkAdapter;
     private KategoriAdapter kategoriAdapter;
 
     public HomeFragment() {
