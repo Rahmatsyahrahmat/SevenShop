@@ -32,8 +32,7 @@
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/rv_home_kategori"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/background_item_pic_produk" />
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:layout_width="wrap_content"

@@ -1,80 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="50dp"
     tools:context=".activity.LoginActivity">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="281dp"
-        android:background="@drawable/sevenshops_logo" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Masuk"
-        android:textStyle="bold"
-        android:textColor="@color/colorPrimary"
-        android:textAlignment="center"
-        android:textSize="20dp" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Email"/>
-
-    <EditText
-        android:id="@+id/et_login_email"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@drawable/background_inputtext"
-        android:layout_marginBottom="10dp"
-        android:inputType="textEmailAddress"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Kata Sandi"/>
-
-
-    <EditText
-        android:id="@+id/et_login_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/background_inputtext"
-        android:inputType="textPassword"
-        />
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:weightSum="2"
-        android:layout_marginTop="10dp">
+        android:orientation="vertical"
+        android:padding="50dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/sevenshops_logo"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Masuk"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:textAlignment="center"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email"/>
+
+        <EditText
+            android:id="@+id/et_login_email"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/background_inputtext"
+            android:layout_marginBottom="10dp"
+            android:inputType="textEmailAddress"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kata Sandi"/>
+
+
+        <EditText
+            android:id="@+id/et_login_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_inputtext"
+            android:inputType="textPassword"
+            />
+        <Button
+            android:id="@+id/btn_login_login"
+            android:text="Masuk"
+            android:background="@drawable/btn_green"
+            android:textColor="@color/secondaryLightColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="30dp"/>
         <Button
             android:id="@+id/btn_login_register"
             android:text="Daftar"
-            android:textColor="@color/colorPrimary"
             android:layout_marginTop="20dp"
-            android:layout_width="0dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            />
-        <Button
-            android:layout_weight="1"
-            android:id="@+id/btn_login_login"
-            android:text="Masuk"
-            android:textColor="#FFFFFF"
-            android:background="@color/colorPrimary"
-            android:layout_marginTop="20dp"
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            />
+            android:textColor="@color/colorPrimary"
+            android:background="@drawable/btn_white"/>
 
     </LinearLayout>
 
-
-</LinearLayout>
+</ScrollView>

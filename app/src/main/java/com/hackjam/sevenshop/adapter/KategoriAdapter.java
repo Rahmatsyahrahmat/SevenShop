@@ -1,6 +1,7 @@
 package com.hackjam.sevenshop.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.hackjam.sevenshop.R;
+import com.hackjam.sevenshop.activity.KategoriActivity;
 import com.hackjam.sevenshop.model.Kategori;
 
 import java.util.ArrayList;
@@ -32,9 +34,17 @@ public class KategoriAdapter extends RecyclerView.Adapter<KategoriAdapter.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(@NonNull ViewHolder viewHolder, final int i) {
         viewHolder.textView.setText(kategoris.get(i).getNama());
         viewHolder.imageView.setImageDrawable(context.getResources().getDrawable(kategoris.get(i).getIcon()));
+        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, KategoriActivity.class);
+                intent.putExtra("Kategori",kategoris.get(i).getNama());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

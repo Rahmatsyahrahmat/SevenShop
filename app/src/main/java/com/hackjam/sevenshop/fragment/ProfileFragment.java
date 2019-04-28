@@ -10,6 +10,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -43,8 +44,11 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
 
     private CircleImageView iv_foto;
     private TextView nama, editProfil, editPassword, syaratKetentuan, keluar;
-    private ProgressDialog progress;
+
     private FirebaseAuth firebaseAuth;
+
+    private ProgressBar progressBar;
+    private View mainView;
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -62,9 +66,9 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
         editPassword = rootView.findViewById(R.id.tv_profile_ganti_pass);
         syaratKetentuan = rootView.findViewById(R.id.tv_profile_syarat_dan_ketentuan);
         keluar = rootView.findViewById(R.id.tv_profile_keluar);
-        progress = new ProgressDialog(getContext());
-        progress.setMessage("Loading");
-        progress.show();
+        progressBar = rootView.findViewById(R.id.pb_profile);
+        mainView = rootView.findViewById(R.id.main_view_profile);
+
         firebaseAuth = FirebaseAuth.getInstance();
 
         StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("User").child(firebaseAuth.getCurrentUser().getUid()+".jpg");
@@ -74,12 +78,13 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
                 @Override
                 public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
                     if(localFile!=null)iv_foto.setImageBitmap(BitmapFactory.decodeFile(localFile.getAbsolutePath()));
-                    progress.dismiss();
+                    progressBar.setVisibility(View.GONE);
+                    mainView.setVisibility(View.VISIBLE);
                 }
             });
         } catch (IOException e) {
             e.printStackTrace();
-            progress.dismiss();
+            progressBar.setVisibility(View.GONE);
         }
 
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("User").child(firebaseAuth.getCurrentUser().getUid());
