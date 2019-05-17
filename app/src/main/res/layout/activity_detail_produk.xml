@@ -22,26 +22,35 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorBlack"
-                android:textSize="18sp"
+                android:textSize="22sp"
+                android:paddingLeft="35dp"
+                android:text="textview"
                 android:textStyle="bold"
                 android:paddingHorizontal="8dp"/>
             <TextView
                 android:id="@+id/tv_detailproduk_hargalama"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="textview"
+                android:paddingLeft="35dp"
                 android:paddingHorizontal="8dp"/>
+
             <TextView
                 android:id="@+id/tv_detailproduk_hargapotongan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
+                android:paddingLeft="35dp"
+                android:text="textview"
                 android:paddingHorizontal="8dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Deskripsi Produk"
+                android:padding="12dp"
                 android:paddingHorizontal="8dp"/>
+
             <TextView
                 android:id="@+id/tv_detailproduk_deksripsi"
                 android:layout_width="match_parent"
@@ -59,6 +68,7 @@
         android:layout_alignParentBottom="true"
         android:background="@drawable/btn_green"
         android:layout_margin="20dp"
+        android:padding="10dp"
         android:text="MAU"
         android:textColor="@color/secondaryLightColor"
         android:drawableLeft="@drawable/ic_add_shopping_cart_24dp"

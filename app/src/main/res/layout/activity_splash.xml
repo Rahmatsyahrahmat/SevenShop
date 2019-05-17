@@ -9,6 +9,7 @@
     android:background="@color/colorPrimary">
 
     <ImageView
+        android:id="@+id/iv_logo1_ss"
         android:layout_width="wrap_content"
         android:layout_height="112dp"
         android:layout_marginTop="25dp"
@@ -18,6 +19,7 @@
         tools:layout_editor_absoluteY="45dp" />
 
     <ImageView
+        android:id="@+id/iv_logo2_ss"
         android:layout_width="52dp"
         android:layout_height="64dp"
         android:layout_marginLeft="40dp"
@@ -27,6 +29,7 @@
         tools:layout_editor_absoluteY="45dp" />
 
     <ImageView
+        android:id="@+id/iv_logo3_ss"
         android:layout_width="90dp"
         android:layout_height="86dp"
         android:layout_marginTop="40dp"

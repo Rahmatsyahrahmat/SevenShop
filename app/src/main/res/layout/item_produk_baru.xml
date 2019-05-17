@@ -32,9 +32,40 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="TextView"
+        android:textSize="16dp"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/iv_produk_gambar"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_produk_hargaawal"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Rp TextView"
+        android:textSize="9dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_produk_gambar"
+        app:layout_constraintTop_toBottomOf="@+id/tv_produk_judul" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/iv_produk_gambar"
+        app:layout_constraintTop_toBottomOf="@+id/tv_produk_judul" />
 
     <TextView
         android:id="@+id/tv_produk_harga"
@@ -48,7 +79,7 @@
         android:text="Rp TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/iv_produk_gambar"
-        app:layout_constraintTop_toBottomOf="@+id/tv_produk_judul" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_produk_hargaawal" />
 
     <TextView
         android:id="@+id/tv_produk_progres"
@@ -61,6 +92,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:text="TextView"
+        android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -97,6 +129,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:max="50"
+        android:background="@drawable/background_progress_bar"
         android:progressTint="@color/colorPrimaryDark"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         app:layout_constraintEnd_toEndOf="parent"
