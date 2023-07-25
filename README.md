@@ -2,7 +2,7 @@
 Hackjam 
 
 ### Overview :
-Seven Shop Adalah Aplikasi E-Commers sederhana dengan memesan diskon yang disertai slot pembelian, Aplikasi ini menggunakan bahasa Java dan Firebase sebagai database
+Seven Shop Adalah Aplikasi E-Commers sederhana dengan memesan barang yang diskon yang disertai slot pembelian, Aplikasi ini menggunakan bahasa Java dan Firebase sebagai database
 
 ### Features :
 1. Menampilkan Kategori 
